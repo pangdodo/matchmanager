@@ -1,0 +1,38 @@
+logging:
+  level:
+    root: INFO
+  path:
+  
+ 
+wx:
+  mp:
+    configs:
+      - appId: wxf67c2bdba9d635dc
+        secret: cd84d18cef60278987021ea595615386
+        token: badminton
+        aesKey: 111 （接口配置里的EncodingAESKey值）
+
+mybatis:
+  typeAliasesPackage: com.zq.matchmanager.domain
+  mapperLocations: classpath:mapper/*.xml
+  
+mapper:
+  mappers: com.zq.matchmanager.util.MyMapper
+  not-empty: false
+  identity: MYSQL
+
+
+spring:
+  thymeleaf:
+    encoding: UTF-8
+    cache: false 
+    mode: HTML5 
+  datasource:
+    username: root
+    password: 'nwpn_7186'
+    url: jdbc:mysql://127.0.0.1:3306/badminton?characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update 
+    show-sql: true
